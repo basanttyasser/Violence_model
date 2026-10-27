@@ -1,0 +1,8 @@
+__pycache__/
+*.keras
+*.tflite
+*.pt
+*.mp4
+*.exe
+.venv/
+venv/

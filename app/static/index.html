@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violence Detection System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Violence Detection System</h1>
+        
+        <!-- Mode Selector Tabs -->
+        <div class="mode-selector">
+            <button id="tabWebcam" class="active">Live Webcam</button>
+            <button id="tabUpload">Upload Video</button>
+        </div>
+
+        <!-- WEBCAM MODE -->
+        <div id="webcamMode">
+            <div class="video-container">
+                <video id="webcam" autoplay muted playsinline></video>
+                <div id="status-overlay-webcam" class="status safe">SAFE</div>
+            </div>
+            <div class="controls">
+                <button id="startBtn">Start Detection</button>
+                <button id="stopBtn" disabled>Stop Detection</button>
+            </div>
+        </div>
+
+        <!-- UPLOAD MODE -->
+        <div id="uploadMode" style="display: none;">
+            <div class="upload-controls">
+                <input type="file" id="videoUpload" accept="video/mp4,video/webm,video/ogg">
+                <button id="analyzeBtn" disabled>Analyze Video</button>
+            </div>
+            <div class="video-container">
+                <video id="uploadedVideo" controls playsinline></video>
+                <div id="status-overlay-upload" class="status safe" style="display: none;">WAITING...</div>
+            </div>
+        </div>
+
+        <div class="logs">
+            <h3>Detection Logs</h3>
+            <p id="logText">System ready. Please select an option.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>.

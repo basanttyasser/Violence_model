@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+h1 { margin-top: 0; color: #bb86fc; }
+
+/* Tabs Styling */
+.mode-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: #2c2c2c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.mode-selector button {
+    flex: 1;
+    margin: 0;
+    border-radius: 0;
+    background: transparent;
+    color: #a4a4a4;
+    padding: 12px;
+}
+
+.mode-selector button.active {
+    background: #bb86fc;
+    color: #000;
+}
+
+/* Video Containers */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    border: 3px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+}
+
+video {
+    width: 100%;
+    max-height: 400px;
+    display: block;
+    object-fit: contain;
+}
+
+.status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+    z-index: 10;
+}
+
+.safe { background-color: rgba(76, 175, 80, 0.9); color: white; }
+.danger { background-color: rgba(244, 67, 54, 0.9); color: white; }
+.warning { background-color: rgba(255, 152, 0, 0.9); color: white; } /* For loading */
+
+.controls, .upload-controls { margin: 20px 0; }
+
+input[type="file"] {
+    padding: 10px;
+    background: #2c2c2c;
+    border-radius: 6px;
+    color: white;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+#startBtn, #analyzeBtn { background-color: #03dac6; color: #000; }
+#stopBtn { background-color: #cf6679; color: #fff; }
+
+.logs {
+    background: #2c2c2c;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.logs h3 { margin-top: 0; font-size: 1.1rem; border-bottom: 1px solid #444; padding-bottom: 5px; }
+#logText { font-family: monospace; color: #a4a4a4; word-wrap: break-word; }
